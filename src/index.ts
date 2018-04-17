@@ -1,2 +1,2 @@
-// tslint-language-service
-console.log("Hello world");
+// tslint:disable-next-line
+console.log("hello world!");
