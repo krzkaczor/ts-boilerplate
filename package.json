@@ -16,7 +16,7 @@
     "test:fix": "yarn lint:fix"
   },
   "devDependencies": {
-    "@types/node": "^9.6.5",
+    "@types/node": "^10.0.3",
     "prettier": "^1.12.1",
     "ts-node": "^6.0.0",
     "tslint": "^5.9.1",
