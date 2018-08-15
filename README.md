@@ -2,7 +2,7 @@
 
 TypeScript + TSlint + Prettier + [TypeStrict](https://github.com/krzkaczor/TypeStrict)
 
-## Using
+## Usage
 
 ```
 yarn test:fix   # to run all possible checks (linter, formatter, tests) and try autofix errors
