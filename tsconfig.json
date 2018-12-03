@@ -3,7 +3,6 @@
     "target": "es2017",
     "module": "commonjs",
     "strict": true,
-    "noImplicitThis": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
