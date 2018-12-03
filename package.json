@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node ./src/index.ts",
+    "build": "rm -rf ./lib && tsc",
     "format": "prettier --list-different '**/*.{ts,json,md, gql}'",
     "format:fix": "prettier --write '**/*.{ts,json,md,gql}'",
     "tslint": "tslint -p ./tsconfig.json -e 'node_modules/**/*' -e '**/node_modules/**/*' '**/*.ts'",
@@ -16,12 +17,12 @@
     "test:fix": "yarn lint:fix"
   },
   "devDependencies": {
-    "@types/node": "^10.12.0",
-    "prettier": "^1.14.3",
+    "@types/node": "^10.12.12",
+    "prettier": "^1.15.3",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-language-service": "^0.9.9",
-    "typescript": "^3.1.3",
+    "typescript": "^3.2.1",
     "typestrict": "^1.0.1"
   }
 }
