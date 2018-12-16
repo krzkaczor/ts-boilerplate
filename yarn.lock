@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@types/node@^10.12.12":
-  version "10.12.12"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.12.tgz#e15a9d034d9210f00320ef718a50c4a799417c47"
-  integrity sha512-Pr+6JRiKkfsFvmU/LK68oBRCQeEg36TyAbPhc2xpez24OOZZCuoIhWGTd39VZy6nGafSbxzGouFPTFD/rR1A0A==
+"@types/node@^10.12.15":
+  version "10.12.15"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.15.tgz#20e85651b62fd86656e57c9c9bc771ab1570bc59"
+  integrity sha512-9kROxduaN98QghwwHmxXO2Xz3MaWf+I1sLVAA6KJDF5xix+IyXVhds0MAfdNwtcpSrzhaTsNB0/jnL86fgUhqA==
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -309,6 +309,11 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
+ts-essentials@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-1.0.1.tgz#a84f724dc53197520b11c1433ffda9a870a94a57"
+  integrity sha512-q/QR2vUVbKbLGUJDGk9yoRbVjsb4VPH5Fbn2Kdk2DPbFmp9/Gn1ys6aKtjSobc4KKxr1YC5UMhBqKZ6fnZJ7ng==
+
 ts-node@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"
@@ -386,15 +391,15 @@ tsutils@^2.27.2:
   dependencies:
     tslib "^1.8.1"
 
-typescript@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.1.tgz#0b7a04b8cf3868188de914d9568bd030f0c56192"
-  integrity sha512-jw7P2z/h6aPT4AENXDGjcfHTu5CSqzsbZc6YlUIebTyBAq8XaKp78x7VcSh30xwSCcsu5irZkYZUSFP1MrAMbg==
+typescript@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.2.tgz#fe8101c46aa123f8353523ebdcf5730c2ae493e5"
+  integrity sha512-VCj5UiSyHBjwfYacmDuc/NOk4QQixbE+Wn7MFJuS0nRuPQbof132Pw4u53dm264O8LPc2MVsc7RJNml5szurkg==
 
-typestrict@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/typestrict/-/typestrict-1.0.1.tgz#40aaf56ba7c2f3f0f413382092007877dbd20b11"
-  integrity sha512-ECgO3o9BYYtHIbUwv3s/oNCekulLH3dbhU7E50gxelnB9Td7pTtp34WH9DBPCX6YaAEZDTGxnbfS6pprV1x1gg==
+typestrict@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/typestrict/-/typestrict-1.0.2.tgz#7167559a128508162920614ce58af6ac6b5ba29a"
+  integrity sha512-4wEr84NPc0ldINrgwgSBTmbWPiGVbwO3c9xumM0ujp0DlzhTs3jUT0NtVBOd5UXneSXcStNJWj80zerbW2YR6Q==
   dependencies:
     tslint-microsoft-contrib "^5.0.3"
     tslint-sonarts "^1.8.0"
