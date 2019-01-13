@@ -13,11 +13,16 @@
     "tsc": "tsc --noEmit",
     "lint": "yarn format && yarn tslint && yarn tsc",
     "lint:fix": "yarn format:fix && yarn tslint:fix && yarn tsc",
-    "test": "yarn lint",
-    "test:fix": "yarn lint:fix"
+    "test:unit": "mocha --reporter spec --require ts-node/register 'src/**/*.spec.ts'",
+    "test": "yarn lint && yarn test:unit",
+    "test:fix": "yarn lint:fix && yarn test:unit"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.18",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
     "prettier": "^1.15.3",
     "ts-essentials": "^1.0.2",
     "ts-node": "^7.0.1",
