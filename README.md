@@ -1,6 +1,6 @@
 # TS Boilerplate
 
-TypeScript + TSlint + Prettier + [TypeStrict](https://github.com/krzkaczor/TypeStrict)
+TypeScript + TSlint + Prettier + [TypeStrict](https://github.com/krzkaczor/TypeStrict) + mocha + chai
 
 ## Usage
 
