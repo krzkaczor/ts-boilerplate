@@ -19,16 +19,16 @@
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.18",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "10",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "prettier": "^1.15.3",
-    "ts-essentials": "^1.0.2",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.12.1",
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
+    "ts-essentials": "^2.0.12",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
     "tslint-language-service": "^0.9.9",
-    "typescript": "^3.2.2",
+    "typescript": "^3.5.3",
     "typestrict": "^1.0.2"
   }
 }
