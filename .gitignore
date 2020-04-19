@@ -1,2 +1,5 @@
 node_modules
-lib
+dist
+yarn-error.log
+.DS_Store
+*.tsbuildinfo

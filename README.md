@@ -1,14 +1,7 @@
-# TS Boilerplate
+# Boilerplate
 
-TypeScript + TSlint + Prettier + [TypeStrict](https://github.com/krzkaczor/TypeStrict) + mocha + chai
-
-## Usage
-
-```
-yarn test:fix   # to run all possible checks (linter, formatter, tests) and try autofix errors
-```
-
-Boilerplate comes with `tslint-language-service` plugin which allows you to see linter problems that would likely
-produce bugs directly in the IDE. To use it make sure to
-[switch](https://github.com/angelozerr/tslint-language-service#editors-support) project's typescript compiler in you
-IDE.
+* TypeScript with project references
+* Eslint with TypeSTRICT
+* Prettier
+* Mocha with Chai and basic helpers
+* ts-essentials
