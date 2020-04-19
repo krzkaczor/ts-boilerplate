@@ -17,7 +17,7 @@ commands:
             - ~/.cache/yarn
 
 jobs:
-  build:
+  build_and_test:
     docker:
       - image: circleci/node:11.15
     steps:
@@ -29,6 +29,6 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  build_and_test:
     jobs:
       - build_and_test
