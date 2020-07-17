@@ -1,7 +1,7 @@
 # Boilerplate
 
-* TypeScript with project references
+* TypeScript
 * Eslint with TypeSTRICT
 * Prettier
-* Mocha with Chai and basic helpers
+* Earl for testing
 * ts-essentials
