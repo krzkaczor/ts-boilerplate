@@ -29,62 +29,12 @@ jobs:
           key: ${{ runner.OS }}-${{ matrix.node }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.OS }}-${{ matrix.node }}-yarn-cache-
 
-      - name: Install
-        run: yarn --no-progress --non-interactive --frozen-lockfile
-
-      - name: Lint
-        run: yarn lint
-
-      - name: Prettier
-        run: yarn format
-
-      - name: Build (excluding website)
-        run: yarn build:noweb
-
-      - name: Test
-        run: CI=true yarn test
-
-      - name: Typecheck
-        run: yarn typecheck
-
-      - name: Setup SSH debug session
-        uses: mxschmitt/action-tmate@v2
-
-  deploy-docs:
-    needs:
-      - build
-    runs-on: ubuntu-latest
-
-    # run only on pushes or PRs from within a repo (not forks)
-    # AND only on master or branches with name deploy
-    if:
-      (github.event_name == 'push' || github.event.pull_request.head.repo.full_name != 'earl-js/earl') && (github.ref ==
-      'refs/heads/master' || contains(github.ref, 'deploy'))
-
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-
-      - name: Cache YARN dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.OS }}-14.x-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.OS }}-14.x-yarn-cache-
-
-      - name: Install
-        run: yarn --no-progress --non-interactive --frozen-lockfile
-
-      - name: Deploy to netlify
-        env:
-          NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
-          NETLIFY_API_KEY: ${{ secrets.NETLIFY_API_KEY }}
-        run: |
-          ./packages/website/scripts/build-and-deploy.sh
+      - run: yarn --no-progress --non-interactive --frozen-lockfile
+      - run: yarn lint
+      - run: yarn format
+      - run: yarn build
+      - run: yarn test
+      - run: yarn typecheck
 
 # Few tips github actions
 # - name: Setup SSH debug session
