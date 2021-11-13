@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   env: {
     es6: true,
@@ -10,7 +11,11 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'import/no-extraneous-dependencies': ['error'],
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': ['error'],
+    'no-invalid-this': 'off',
+    // this gets inlined into a package eslint, so it means: use current package's package.info or the one at the project root
+    'import/no-extraneous-dependencies': ['error', { packageDir: ['./', __dirname] }],
     'unused-imports/no-unused-imports-ts': 'error',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
@@ -41,6 +46,7 @@ module.exports = {
       },
     ],
     'no-control-regex': 'error',
+    'no-console': 'error',
     'no-debugger': 'error',
     'no-delete-var': 'error',
     'no-dupe-args': 'error',
@@ -84,12 +90,6 @@ module.exports = {
     'no-octal-escape': 'error',
     'no-path-concat': 'error',
     'no-proto': 'error',
-    'no-redeclare': [
-      'error',
-      {
-        builtinGlobals: false,
-      },
-    ],
     'no-regex-spaces': 'error',
     'no-return-assign': ['error', 'except-parens'],
     'no-self-assign': 'error',
