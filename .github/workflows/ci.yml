@@ -10,26 +10,18 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ['14.2']
+        node: ['18.5']
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18.x
+          cache: "yarn"
+      - run: yarn --frozen-lockfile
 
-      - name: Cache YARN dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.OS }}-${{ matrix.node }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.OS }}-${{ matrix.node }}-yarn-cache-
-
-      - run: yarn --no-progress --non-interactive --frozen-lockfile
       - run: yarn lint
       - run: yarn format
       - run: yarn build
